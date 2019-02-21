@@ -4,9 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieList"
-        mc:Ignorable="d"
+        mc:Ignorable="d" FontSize="24"
         Title="MainWindow" Height="400" Width="525">
     <StackPanel Margin="10,10,10,10">
+        <TextBlock x:Name="textBlockTitle" TextWrapping="Wrap" Text="Title: "/>
+        <TextBox x:Name="textBoxTitle" Height="40" TextWrapping="Wrap" Text=""/>
+        
+        <TextBlock x:Name="textBlockReleaseYear" TextWrapping="Wrap" Text="Release Year: "/>
+        <TextBox x:Name="textBoxReleaseYear" Height="40" TextWrapping="Wrap" Text=""/>
+        
+        <Button x:Name="buttonAddMovie" Content="Add Movie" Click="buttonAddMovie_Click"/>
+        <Button x:Name="buttonShowAllMovies" Content="Show All Movies" Click="buttonShowAllMovies_Click"/>
+
+
 
     </StackPanel>
 </Window>
