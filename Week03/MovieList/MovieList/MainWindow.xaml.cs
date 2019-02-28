@@ -23,7 +23,7 @@ namespace MovieList
     {
 
         private List<Movie> movieList;
-
+        
 
 
         public MainWindow() //Constructor
@@ -35,17 +35,108 @@ namespace MovieList
 
         private void buttonAddMovie_Click(object sender, RoutedEventArgs e)
         {
+            string movieName = " ";
+            int movieReleaseYear = 0;
+            
+            try
+            {
+                movieName = textBoxTitle.Text;
+            }
+            catch (Exception)
+            {
+                NotifyUser.DisplayMessage("Invalid String Detected");
+                ClearTextBoxes(true, false);
+            }
 
+            try
+            {
+                movieReleaseYear = Convert.ToInt32(textBoxReleaseYear.Text);
+            }
+            catch (Exception)
+            {
+                NotifyUser.DisplayMessage("Invalid Release Year Detected");
+                ClearTextBoxes(false, true);
+            }
+            
+
+            double movieReviewScore = (movieScoreSlider.Value / movieScoreSlider.Maximum) * 100;
+            movieReviewScore = Math.Ceiling(movieReviewScore);
+
+
+
+
+            Movie newMovie = new Movie(movieName, movieReleaseYear, movieReviewScore);
+
+
+
+
+
+
+            if (!CheckForRepeats(newMovie, movieList))
+            {
+                movieList.Add(newMovie);
+            } else
+            {
+                string error = "Duplicate Movie Detected!\nPlease Retry";
+                NotifyUser.DisplayError(newMovie, error);
+            }
+
+
+
+
+
+            ClearTextBoxes();
         }
 
         private void buttonShowAllMovies_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var item in movieList)
+            try
             {
-                MessageBox.Show("Name: " + item.name + "\n" + "Release Year: " + item.releaseYear);
+                foreach (var item in movieList)
+                {
+                    MessageBox.Show("Name: " + item.getName() + "\n" + "Release Year: " + item.getReleaseYear() + "\n" + "Rotten Tomatoes Score: " + item.getReviewScore());
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            ClearTextBoxes();
+        }
+
+        private void ClearTextBoxes(bool clearTitle = false, bool clearReleaseYear = false)
+        {
+            if (clearTitle)
+            {
+                textBoxTitle.Clear();
+            }
+
+            if (clearReleaseYear)
+            {
+                textBoxReleaseYear.Clear();
+            }
+
+            movieScoreSlider.Value = 0;
         }
 
         
+
+        private bool CheckForRepeats(Movie newMovie, List<Movie> movieList)
+        {
+            foreach (var item in movieList)
+            {
+                if (newMovie.getName() == item.getName())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void PullUserValues()
+        {
+
+        }
     }
 }

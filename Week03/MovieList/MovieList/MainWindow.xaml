@@ -5,16 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieList"
         mc:Ignorable="d" FontSize="24"
-        Title="MainWindow" Height="400" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <StackPanel Margin="10,10,10,10">
-        <TextBlock x:Name="textBlockTitle" TextWrapping="Wrap" Text="Title: "/>
+        <TextBlock x:Name="textBlockTitle" TextWrapping="Wrap" Text="Title: " Margin="20"/>
         <TextBox x:Name="textBoxTitle" Height="40" TextWrapping="Wrap" Text=""/>
-        
-        <TextBlock x:Name="textBlockReleaseYear" TextWrapping="Wrap" Text="Release Year: "/>
+
+        <TextBlock x:Name="textBlockReleaseYear" TextWrapping="Wrap" Text="Release Year: " Margin="20"/>
         <TextBox x:Name="textBoxReleaseYear" Height="40" TextWrapping="Wrap" Text=""/>
-        
-        <Button x:Name="buttonAddMovie" Content="Add Movie" Click="buttonAddMovie_Click"/>
-        <Button x:Name="buttonShowAllMovies" Content="Show All Movies" Click="buttonShowAllMovies_Click"/>
+
+        <TextBlock x:Name="movieScore" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Rotten Tomatoes Score: " Margin="20"/>
+        <Slider x:Name="movieScoreSlider" Margin="20" Value="0" SmallChange="1" Minimum="0" Maximum="100" LargeChange="10"/>
+
+        <Button x:Name="buttonAddMovie" Content="Add Movie" Click="buttonAddMovie_Click" Margin="20"/>
+        <Button x:Name="buttonShowAllMovies" Content="Show All Movies" Click="buttonShowAllMovies_Click" Margin="20"/>
+
+
+
 
 
 
