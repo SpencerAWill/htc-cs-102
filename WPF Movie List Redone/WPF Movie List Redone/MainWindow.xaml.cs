@@ -20,19 +20,29 @@ namespace WPF_Movie_List_Redone
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Genre> allGenres;
+        List<Genre> allGenres = new List<Genre>() { new Genre("Action"), new Genre("Adventure") };
         List<MovieInstance> allMovies;
+
+        ComboBox genreSelectionComboBox = null;
+        Grid editorGrid = null;
+
+
+
+
+
+
 
         public MainWindow()
         {
             InitializeComponent();
-
-            
+            genreSelectionComboBox = EditorGenreSelectionContainer;
+            UIController.addGenreOptions(allGenres, genreSelectionComboBox);
+            editorGrid = MovieEditor;
         }
 
         private void FileButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -48,7 +58,7 @@ namespace WPF_Movie_List_Redone
 
         private void NewMovieButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void NewGenreButton_Click(object sender, RoutedEventArgs e)
