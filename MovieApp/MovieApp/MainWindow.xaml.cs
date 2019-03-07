@@ -25,6 +25,7 @@ namespace MovieApp
         private List<Tag> allTags = new List<Tag>();
 
         private ListBox filmContainer;
+        private Grid infoGrid;
 
 
 
@@ -32,7 +33,7 @@ namespace MovieApp
         {
             InitializeComponent();
             filmContainer = UIFilmContainer;
-            
+            infoGrid = UIInformationGrid;
         }
 
         private void DeleteMovieButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +54,11 @@ namespace MovieApp
         private void AddMovieButton_Click(object sender, RoutedEventArgs e)
         {
             createNewMovie();
+        }
+
+        private void SubmitChanges_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void createNewMovie()
@@ -144,9 +150,9 @@ namespace MovieApp
             }
         }
 
-        private void UIDisplayMovieInfo()
+        private void UIDisplayMovieInfo(FilmInstance currentFilm)
         {
-
+            
         }
 
 
@@ -162,5 +168,7 @@ namespace MovieApp
                 MessageBox.Show(film.DEVDEBUGGetReferenceID().ToString() + "::::::" + film.getListBoxItem().ToString());
             }
         }
+
+        
     }
 }
