@@ -19,7 +19,7 @@
                 <RowDefinition Height=".1*"/>
             </Grid.RowDefinitions>
 
-            <Border Background="Red">
+            <Border Background="#FF120563">
                 <Label Content="Films" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
             </Border> <!-- Top Red Label "Films" -->
 
@@ -35,7 +35,7 @@
                 </ListBoxItem>
             </ListBox> <!-- Film List -->
 
-            <Grid Grid.Row="2" Background="Red">  <!-- Control Buttons -->
+            <Grid Grid.Row="2" Background="#FF120563">  <!-- Control Buttons -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width=".25*"/>
                     <ColumnDefinition Width=".25*"/>
@@ -79,9 +79,25 @@
                 <RowDefinition Height=".1*"/>
             </Grid.RowDefinitions>
 
-            <Border Background="Red">
+            <Border Background="#FF120563">
                 <Label Foreground="White" FontSize="20" Content="Information" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </Border> <!-- Top Red Label "Information" -->
+            </Border> <!-- Top purple Label "Information" -->
+
+            <Grid Grid.Row="1" Grid.RowSpan="9">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".33333*"/>
+                    <ColumnDefinition Width=".66666*"/>
+                </Grid.ColumnDefinitions>
+
+            </Grid>
         </Grid>
     </Grid>
 </Window>

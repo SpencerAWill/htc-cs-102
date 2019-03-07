@@ -111,7 +111,7 @@ namespace MovieApp
 
         }
 
-        private void UIRemoveSelectedFilm()                   //BROKEN TODO
+        private void UIRemoveSelectedFilm()
         {
             
             for (int i = 0; i < filmList.Count; i++)
@@ -143,6 +143,17 @@ namespace MovieApp
                 return null;
             }
         }
+
+        private void UIDisplayMovieInfo()
+        {
+
+        }
+
+
+
+
+
+
 
         private void DEVDEBUGShowAllReferenceIDs()
         {
