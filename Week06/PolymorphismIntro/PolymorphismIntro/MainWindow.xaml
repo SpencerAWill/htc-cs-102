@@ -1,0 +1,18 @@
+﻿<Window x:Class="PolymorphismIntro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InheritanceIntro"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="300">
+    <StackPanel>
+        <Image Source="dog.jpg" Width="200"/>
+        <Button Click="Bark_Button_Click">Bark</Button>
+        <Image Source="duck.jpg" Width="200"/>
+        <Button Click="Quack_Button_Click">Quack</Button>
+        <Image Source="frog.jpg" Width="200"/>
+        <Button Click="Ribbit_Button_Click">Ribbit</Button>
+        <Button Click="SayName_Button_Click">Say Name</Button>
+    </StackPanel>
+</Window>
