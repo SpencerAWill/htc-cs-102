@@ -14,12 +14,18 @@ namespace PolymorphismIntro
             MessageBox.Show("Quack");
         }
 
+        public override void Speak()
+        {
+            Quack();
+        }
+
         public Duck() { }
 
-        public Duck(int height, string name)
+        public Duck(int height, string name, int weight)
         {
             this.Height = height;
             this.Name = name;
+            this.Weight = weight;
         }
     }
 }

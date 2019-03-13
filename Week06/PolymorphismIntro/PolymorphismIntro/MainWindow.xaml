@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="300">
     <StackPanel>
-        <Image Source="dog.jpg" Width="200"/>
-        <Button Click="Bark_Button_Click">Bark</Button>
-        <Image Source="duck.jpg" Width="200"/>
-        <Button Click="Quack_Button_Click">Quack</Button>
-        <Image Source="frog.jpg" Width="200"/>
-        <Button Click="Ribbit_Button_Click">Ribbit</Button>
+        <ListView Name="lvAnimals" Height="150px" Margin="0,0,0,10" SelectionChanged="lvAnimals_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Height" DisplayMemberBinding="{Binding Height}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Weight" DisplayMemberBinding="{Binding Weight}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
         <Button Click="SayName_Button_Click">Say Name</Button>
     </StackPanel>
 </Window>

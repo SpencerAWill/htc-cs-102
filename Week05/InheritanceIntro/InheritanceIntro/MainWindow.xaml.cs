@@ -33,34 +33,44 @@ namespace InheritanceIntro
 
         private void SayName_Button_Click(object sender, RoutedEventArgs e)
         {
+            List<Animal> animals = new List<Animal>();
+
             // Define a new List of dogs
-            List<Dog> dogs = new List<Dog>();
+            //List<Dog> dogs = new List<Dog>();
             
             // Instantiate some dog objects
             Dog dog1 = new Dog("Muppet", 20, "Rolf");
             Dog dog2 = new Dog("Golden Retriever", 30, "Air Bud");
 
             // Add the dogs to the list
-            dogs.Add(dog1);
-            dogs.Add(dog2);
+            animals.Add(dog1);
+            animals.Add(dog2);
 
             // Loop through the list and call a method on the objects
-            foreach (Dog d in dogs)
-            {
-                d.sayName();
-            }
+            //foreach (Dog d in dogs)
+            //{
+            //    d.sayName();
+            //}
 
-            List<Duck> duckList = new List<Duck>();
+            
+
+            //List<Duck> duckList = new List<Duck>();
 
             Duck duck1 = new Duck(27, "Queen");
             Duck duck2 = new Duck(31, "Harold");
 
-            duckList.Add(duck1);
-            duckList.Add(duck2);
+            animals.Add(duck1);
+            animals.Add(duck2);
 
-            foreach (var duck in duckList)
+            //foreach (var duck in duckList)
+            //{
+            //    duck.sayName();
+            //}
+
+            foreach (Animal animal in animals)
             {
-                duck.sayName();
+                animal.sayName();
+                
             }
         }
 
