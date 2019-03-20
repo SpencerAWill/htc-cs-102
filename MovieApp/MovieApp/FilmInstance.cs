@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Controls;
 
 namespace MovieApp
@@ -8,7 +9,7 @@ namespace MovieApp
         private int _referenceId;
         private string _name { get; set; }
         private List<Tag> _tags { get; }
-        private int _releaseYear { get; set; }
+        private DateTime _releaseYear { get; set; }
         private double _reviewScore;
 
         private ListBoxItem _UIreferenceItem;
@@ -62,11 +63,11 @@ namespace MovieApp
             _name = name;
         }
 
-        public void setReleaseYear(int year = 2000)
+        public void setReleaseYear(DateTime date = new DateTime())
         {
-            _releaseYear = year;
+            _releaseYear = date;
         }
-        public int getReleaseYear()
+        public DateTime getReleaseYear()
         {
             return _releaseYear;
         }

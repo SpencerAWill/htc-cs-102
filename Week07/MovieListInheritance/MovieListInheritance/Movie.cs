@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace MovieList
+namespace MovieListInheritance
 {
     public class Movie
     {
@@ -16,7 +16,7 @@ namespace MovieList
             set;
         }
 
-        public void ShowDetails()
+        public virtual void ShowDetails()
         {
             string infoString = "Title: " + this.Title;
             infoString += "\nRelease Year: " + this.ReleaseYear;

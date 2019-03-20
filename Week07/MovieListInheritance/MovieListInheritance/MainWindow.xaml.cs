@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MovieList
+namespace MovieListInheritance
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -56,6 +56,20 @@ namespace MovieList
             {
                 selectedMovie.ShowDetails();
             }
+        }
+
+        private void AddAnimatedMovieButton_Click(object sender, RoutedEventArgs e)
+        {
+            string animationStudioUserInput = txtBoxAnimationStudio.Text;
+            string animationTypeUserInput = txtBoxAnimationType.Text;
+
+            AnimatedMovie animatedMovie = new AnimatedMovie("New Movie", DateTime.Now, animationStudioUserInput, animationTypeUserInput);
+            MovieList.Add(animatedMovie);
+
+
+            //clear original fields
+            txtBoxAnimationStudio.Clear();
+            txtBoxAnimationType.Clear();
         }
     }
 }
