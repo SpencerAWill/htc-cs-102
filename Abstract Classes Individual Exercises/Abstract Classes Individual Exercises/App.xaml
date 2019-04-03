@@ -1,0 +1,9 @@
+﻿<Application x:Class="Abstract_Classes_Individual_Exercises.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Abstract_Classes_Individual_Exercises"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
