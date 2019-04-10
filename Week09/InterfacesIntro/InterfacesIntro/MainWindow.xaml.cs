@@ -43,6 +43,13 @@ namespace InheritanceIntro
             Speakers.Add(robot);
 
             lvAnimals.ItemsSource = Speakers;
+
+
+
+
+
+
+            List<int> test = new List<int>();
         }
 
         private void lvAnimals_MouseDoubleClick(object sender, MouseButtonEventArgs e)

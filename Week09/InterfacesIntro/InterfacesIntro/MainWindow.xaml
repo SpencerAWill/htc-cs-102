@@ -12,6 +12,10 @@
                 <GridView>
                     <GridViewColumn Width="150" Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
                     <GridViewColumn Width="100" Header="Height" DisplayMemberBinding="{Binding Height}"></GridViewColumn>
+
+                    <Canvas>
+                        
+                    </Canvas>
                 </GridView>
             </ListView.View>
         </ListView>

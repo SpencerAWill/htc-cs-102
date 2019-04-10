@@ -24,5 +24,7 @@ namespace InheritanceIntro
             this.Name = name;
             this.IsPoisonous = isPoisonous;
         }
+
+        
     }
 }
